@@ -86,6 +86,16 @@ letter-spacing: 0.05em;
 font-size: 11px;
 line-height: var(--typical-lh);
 text-transform: uppercase;  
+display: flex;
+align-items: center;
+gap: 20px;
+    }
+
+    .pre-title::before {
+      content: "";
+      width: 60px;
+      height: 1px;
+      background: currentColor;
     }
     .site-body {
 }
@@ -186,7 +196,28 @@ margin-bottom: 20px;
    letter-spacing: 0.05em;
   color: var(--first-title-color, #ffffff);
   margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+}
 
+.hero-title::before {
+   content: ""; 
+   width: 40px;
+   height: 40px;
+   background-image: url(../img/barber41.jpg);
+ background-size: cover;                                                                                                                                                                                                                                        
+}
+
+.hero-title::after {
+   content: "!";                                                   
+}
+
+.hero-title::first-letter {
+   color: aquamarine;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+}
+
+.hero-title::selection {
+   background-color: #ff6c00;
 }
 .hero-after-title {
 font-size: 18px;
@@ -243,9 +274,25 @@ color: #303030;
 
 /* -----PRICES---- */
 .prices {
-   background-color: #303030;
+   background-color: #111319;
+   background-image: url(../img/prices-img.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   min-width: 1600px;
+   margin: 0 auto;
    padding-top: 120px;
    padding-bottom: 120px;
+}
+
+.prices-list:first-child {
+   background: linear-gradient(180deg,
+    #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list:last-child {
+   background: linear-gradient(180deg, 
+   #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 .prices-pre-title {
 color: rgba(157, 164, 189, 0.6);
@@ -261,13 +308,23 @@ margin-bottom: 44px;
    margin-bottom: 44px;
 }
 .prices-list {
-   border: 1px solid #FFFFFF;
-   width: calc((100%-30px)/2);
+     width: calc((100%-30px)/2);
    padding: 30px 20px;
+}
+/* ----line-- */
+.prices-item::before {
+   content: "";
+  width: 100px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
 }
 .prices-item {
    display: flex;
    justify-content: space-between;
+   align-items: baseline;
+   gap: 12px;
+  
 }
 .prices-item + .prices-item {
    margin-top: 20px;
@@ -278,6 +335,10 @@ font-size: 18px;
 line-height: 1.67;
 letter-spacing: 0.02em;
 color: #9DA4BD;
+}
+
+.prices-item-text:first-child {
+   order: -1;
 }
 .prices-btn {
 color: #ffffff;
@@ -290,8 +351,36 @@ margin: 0 auto;
    padding-top: 120px;
    padding-bottom: 120px;
 }
-.benefits-list {
+
+.benefits > .container {
+   display: flex;
+   gap: 130px;
+   padding-left: 85px;
 }
+
+.benefits-wrap {
+   max-width: 500px;
+}
+.benefits-list {
+   display: flex;
+   width: 370px;
+   flex-wrap: wrap;
+   }
+
+.benefits-item {
+   width: 170px;
+   height: 133px;
+   background-color: #f7f7f7;
+   padding: 20px 24px;
+}
+.benefits-item:nth-child(odd) {
+   margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+   margin-top: 30px;
+}
+
 .benefits-item .count {
 font-weight: 700;
 font-size: 42px;
@@ -299,6 +388,7 @@ line-height: calc(57/42);
 text-align: center;
 letter-spacing: 0.05em;
 color: var(--main-text-color);
+display: block;
 }
 .benefits-item-text {
 font-weight: 600;
@@ -385,13 +475,13 @@ margin-bottom: 30px;
 .barbers-soc-link:hover {
    background-color: aquamarine;
 }
-
+/* -----------TEST-icons-line--hover-------- */
 .test {
    padding-top: 120px;
    padding-bottom: 120px;
 }
 .test-list {
-   display: flex;
+   display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                     
    gap: 30px;
 
 }
