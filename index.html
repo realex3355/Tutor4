@@ -19,23 +19,25 @@
         <img src="./img/logo.svg" alt="site logo" />
         </a>
         <ul class="header-list list">
-            <li class="header-item"><a class="header-link link" href="">About</a></li>
-            <li class="header-item"><a class="header-link link" href="">Services and prices</a></li>
-            <li class="header-item"><a class="header-link link" href="">Barbers</a></li>
+            <li class="header-item"><a class="header-link link current" href="">About</a></li>
+            <li class="header-item"><a class="header-link link" href="#prices">Services and prices</a></li>
+            <li class="header-item"><a class="header-link link" href="#barbers">Barbers</a></li>
             <li class="header-item"><a class="header-link link" href="">Contacts</a></li>     
         </ul>
         </nav>
         <a class="header-tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button type="button" class="header-btn btn">online-booking</button>
+        <button type="button" class="header-btn btn" data-modal-open>online-booking</button>
         </div>
     </header>
     <main>
         <section class="hero">
             <div class="container">
-            <ul class="hero-list list">
+            <div class="hero-soc">
+                <ul class="hero-list list">
                 <li class="hero-item"><a class="hero-link link" href="" target="_blank" rel="noopener noreferrer nofollow">instagram</a></li>
                 <li class="hero-item"><a class="hero-link link" href="" target="_blank" rel="noopener noreferrer nofollow">youtube</a></li>
             </ul>
+            </div>
             <div class="hero-wrap">
 <p class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
 <h1 class="hero-title title">BarberShop</h1>
@@ -139,7 +141,12 @@
             <h2 class="barbers-title title">Our barbers</h2>
             <ul class="barbers-list list">
                 <li class="barbers-item">
+                    <div class="barbers-top-wrap">
                     <img src="./img/barber31.jpg" alt="barber3" width="370" height="346">
+                      <p class="barbers-top-text">Lorem, ipsum dolor sit amet 
+                        consectetur adipisicing elit. Odit, 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                      </div>  
                     <h3 class="barbers-item-title">John Smith</h3>
                     <p class="barbers-item-text">Extreme Barber</p> 
                 <ul class="barbers-soc-list list">
@@ -246,6 +253,16 @@
     </ul>
 </div>
 </footer>
-    
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>X
+
+        </button>
+    </div>
+
+</div>
+ <script src="./js/modal.js">
+
+ </script>   
 </body>
 </html> 
